@@ -35,7 +35,7 @@ const incomeTiers = [
 // Aktualizuj majątek co minutę (30 zł na minutę)
 setInterval(() => {
   balance += income / 2;
-  bank += bank * 0.05 / 2;
+  bank += bank * 0.05 / 2; // Odsetki bankowe co minutę
   updateUI();
 }, 30000);
 
@@ -67,7 +67,16 @@ function openCrate(type) {
 
 // Sprzedawanie ekwipunku
 function sellAll() {
-  const itemPrices = { "Złoty Miecz": 500, "Diament": 1000, "Srebrny Pierścień": 300, "Rubin": 800, "Szmaragd": 700, "Unikalny Przedmiot": 5000, "Legenda Smoków": 10000, "Diamentowy Hełm": 2000 };
+  const itemPrices = { 
+    "Złoty Miecz": 500, 
+    "Diament": 1000, 
+    "Srebrny Pierścień": 300, 
+    "Rubin": 800, 
+    "Szmaragd": 700, 
+    "Unikalny Przedmiot": 5000, 
+    "Legenda Smoków": 10000, 
+    "Diamentowy Hełm": 2000 
+  };
   let total = 0;
 
   inventory.forEach(item => {
