@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gra Otwierania Skrzynek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎁 Gra Otwierania Skrzynek</h1>
+  <div id="game">
+    <p>Twój majątek: <span id="balance">2500</span> zł</p>
+    <p>Przychód: <span id="income">40</span> zł na minutę</p>
+    <p>Bank: <span id="bank">0</span> zł (odsetki: 5%/min)</p>
+    <p>Otworzone skrzynki: <span id="openedCrates">0</span></p>
+    <p>Twoja ranga: <span id="rank">Nowicjusz</span></p>
+    
+    <h2>Skrzynki:</h2>
+    <button class="crate-button" onclick="openCrate('basic')">Podstawowa Skrzynka (100 zł)</button>
+    <button class="crate-button" onclick="openCrate('premium')">Premium Skrzynka (500 zł)</button>
+    <button class="crate-button" onclick="openCrate('legendary')">Legendarna Skrzynka (1000 zł)</button>
+    
+    <p>Wynik: <span id="result">---</span></p>
+    <div id="crate-animation" class="hidden">🎁 Otwieranie skrzynki...</div>
+    
+    <h3>Ekwipunek:</h3>
+    <ul id="inventory"></ul>
+    <button onclick="sellAll()">Sprzedaj wszystkie przedmioty</button>
+
+    <h3>Bank</h3>
+    <button onclick="depositToBank()">Wpłać 100 zł do banku</button>
+    <button onclick="withdrawFromBank()">Wypłać 100 zł z banku</button>
+  </div>
+
+  <h3>Opcje</h3>
+  <button onclick="saveGame()">Zapisz grę</button>
+  <button onclick="loadGame()">Wczytaj grę</button>
+
+  <h3>Mod Menu</h3>
+  <input type="password" id="modCode" placeholder="Wprowadź kod">
+  <button onclick="activateMod()">Aktywuj Mod Menu</button>
+  <div id="modMenu" style="display: none;">
+    <button onclick="addMoney()">Dodaj 10000 zł</button>
+    <button onclick="addCustomMoney()">Dodaj dowolną ilość pieniędzy</button>
+    <button onclick="addItem()">Dodaj przedmiot do ekwipunku</button>
+    <button onclick="addSpecificItem()">Dodaj wybrany przedmiot</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
