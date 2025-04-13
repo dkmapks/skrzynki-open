@@ -32,7 +32,7 @@ const incomeTiers = [
   { wealth: 50000, income: 200 },
 ];
 
-// Aktualizuj majątek co minutę (30 zł na minutę)
+// Aktualizuj majątek co minutę
 setInterval(() => {
   balance += income / 2;
   bank += bank * 0.05 / 2; // Odsetki bankowe co minutę
