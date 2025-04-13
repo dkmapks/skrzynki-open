@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f5;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.crate-button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.crate-button:hover {
+  background-color: #45a049;
+}
+
+#crate-animation {
+  font-size: 1.5em;
+  color: orange;
+  margin: 20px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#modMenu {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+  font-size: 1.1em;
+}
