@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skrzynki i Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Skrzynki i Bank</h1>
+    </header>
+
+    <section id="bank-section">
+        <h2>Bank</h2>
+        <div id="bank-controls">
+            <button onclick="deposit(500)">Wpłać 500</button>
+            <button onclick="withdraw(200)">Wypłać 200</button>
+            <button onclick="takeLoan(1000)">Zaciągnij pożyczkę 1000</button>
+            <button onclick="repayLoan(500)">Spłać pożyczkę 500</button>
+            <button onclick="showTransactionHistory()">Pokaż historię transakcji</button>
+        </div>
+        <div id="bank-info">
+            <p>Saldo w banku: <span id="bank-balance">0</span></p>
+            <p>Saldo pożyczki: <span id="loan-balance">0</span></p>
+        </div>
+    </section>
+
+    <section id="box-section">
+        <h2>Skrzynki</h2>
+        <div id="box-controls">
+            <button onclick="openBox('standard')">Otwórz Standardową Skrzynkę</button>
+            <button onclick="openBox('premium')">Otwórz Premium Skrzynkę</button>
+            <button onclick="openBox('seasonal')">Otwórz Sezonową Skrzynkę</button>
+            <button onclick="openBox('mystery')">Otwórz Mystery Box</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
